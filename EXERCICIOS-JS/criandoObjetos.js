@@ -11,17 +11,17 @@ const obj2 = new Object // objeto criado a partir da função construtora
 console.log(obj2)
 
 //Funções construtoras
-function Produto (nome,preco,desc){
+function Produto (nome,preco,desconto){
     this.nome = nome //tornando visivel para todos
     this.getPrecoComDesconto = () => { //metodo publico       
-        return preco * (1 - desc)
+        return preco * (1 - desconto)
     }
 }
 
 
-const p1 = new Produto('Caneta',7.99,0.15)
-const p2 = new Produto('Notebook',2998.99,0.25)
-console.log(p1.getPrecoComDesconto(), p2.getPrecoComDesconto())
+const prod1 = new Produto('Caneta', 7.99, 0.15)
+const prod2 = new Produto('Notebook', 2998.99, 0.25)
+console.log(prod1.getPrecoComDesconto(), prod2.getPrecoComDesconto())
 
 // Função factory
 function criarFuncionario(nome,salarioBase,faltas){
@@ -34,11 +34,13 @@ function criarFuncionario(nome,salarioBase,faltas){
 
         }
     }
+
 }
 
 const f1 = criarFuncionario('João',7900,4)
 const f2 = criarFuncionario('Maria',11400,1)
-console.log(f1.getSalario(), f2.getSalario())
+const f3 = criarFuncionario('Rafael',1000,10)
+console.log(f1.getSalario(), f2.getSalario(), f3.getSalario())
 
 
 //Object.create 
