@@ -1,6 +1,12 @@
-function calcularSalario(horasNoMes,porHora){
-    salario = horasNoMes * porHora
+// function calcularSalario(horasNoMes,porHora){
+//     const salario = horasNoMes * porHora
+//     return `O salário é igual ${salario}`
+// }
+// calcularSalario(150,40.5)
+
+
+  const calcSalario = (horasNoMes,porHora) => {
+    const salario = horasNoMes * porHora
     return `O salário é igual ${salario}`
-}
-calcularSalario(150,40.5)
-calcularSalario(100,80.7)
+  }
+  calcSalario(150,40.5)

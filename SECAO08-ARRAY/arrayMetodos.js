@@ -25,5 +25,5 @@ console.log(pilotos)
 const AlgunsPilotos1 = pilotos.slice(2) // gera um novo array a partir do indice desejado
 console.log(AlgunsPilotos1)
 
-const AlgunsPilotos2 = piltos.slice(1,4) //gera um novo array a partir do intervalo de indices 1 2 3
+const AlgunsPilotos2 = pilotos.slice(1,4) //gera um novo array a partir do intervalo de indices 1 2 3
 
