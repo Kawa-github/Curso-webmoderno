@@ -10,7 +10,19 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
-    </script>
+        document.getElementById('primeiro').classList.add('destaque') //selecionando o id e adicionando uma classe(destaque) a esse elemento
+        
+        const divs = document.getElementsByTagName('div') //selecionando todos os elementos com a tag div
+        Array.from(divs).forEach(e => e.classList.remove('destaque')) // transformando em array e percorrendo cada um dos elementos e removendo a classe destaque
+
+        const divsArray = [...divs] //spread espalha dentro do array
+        divsArray.forEach(e => e.classList.add('destaque')) //adicionando a classe destaque
+    
+        const ultimosElementos = document.getElementsByClassName('ultimo') //selecionando elemento atráves da classe
+        for (let e of ultimosElementos){
+            e.classList.remove('destaque') //removendo a classe 'destaque' do elemento que possui a classe 'ultimo'
+        }
+
+   </script>
 </body>
 </html>

@@ -17,11 +17,15 @@
             margin: 10px;
             font-size: 1.6em;
         }
+
+        .destaque{
+            background-color: blueviolet;
+        }
     </style>
 </head>
 
 <body class="conteudo exercicio">
-    <h1>Formulário</h1>
+    <h1>Formulário</h1> <!--search q hl parametros de busca do google-->
     <form name="pesquisa" action="http://www.google.com.br/search">
         <input type="text" name="q" placeholder="Digite o termo...">
         <select name="hl">
@@ -31,7 +35,15 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        console.log(document.forms)
+        console.log(document.forms[0])
+        console.log(document.getElementsByName('pesquisa'))
+        console.log(document.getElementsByTagName('form'))
+        console.log(document.pesquisa.q) //acessando o elemento atraves do nome. pesquisa:form q:input
+
+        document.pesquisa.q.value = 'Kawã' //inserindo um valor dentro do input que foi selecionado
+        document.pesquisa.hl.value = 'en-us'
+        console.log(document.pesquisa.hl.selectedIndex)
     </script>
 </body>
 
