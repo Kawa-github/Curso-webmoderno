@@ -10,17 +10,33 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
-        <ul id="compras" destino='escritório' data-urgencia="5">
+        <ul id="compras" destino='escritório' data-urgencia="5" data-teste="olá">
             <li>Café</li>
             <li>Água</li>
             <li>Copo Descartável</li>
         </ul>
     </div>
     <script>
-        const lista = document.querySelector('div ul[destino="escritorio"]')
-        console.log('Elemento "ul......')
-        console.log('childNodes', lista.childNodes)
-        console.log()
+        const lista = document.querySelector('#compras') //querySelector("#compras")
+        console.log('Elemento ul.....')
+        console.log('ChilNodes', lista.childNodes)
+        console.log('ID', lista.id)
+        console.log('Destino', lista.destino) //undefined
+        console.log('getAttribute', lista.getAttribute('destino')) //acessando atributo personalizado
+        console.log('hasAttribute', lista.hasAttribute('destino')) // verificar se o atributo está presente - retorna true ou false
+        lista.setAttribute('destino', 'empresa') // setAttribute - alterar ou adicionar um atributo que não existe
+        lista.setAttribute('status', 'aberto')
+
+        console.log('Acessando atributos personalizados com data-', lista.dataset)
+        console.log(lista.dataset.urgencia)
+        lista.dataset.urgencia = 4
+        lista.dataset.teste = "salve"
+        console.log(lista.getAttribute('data-urgencia'))
+
+        const label = document.querySelector('label')
+        console.log(label.for)
+        console.log(label.htmlFor)
+        console.log(label.getAttribute('for'))
     </script>
 </body>
 

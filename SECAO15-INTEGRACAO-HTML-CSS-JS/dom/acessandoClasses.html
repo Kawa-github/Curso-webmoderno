@@ -11,9 +11,30 @@
     <div>
         Classes
     </div>
+    <div class="teste">ola</div>
     <script>
-        // ...
-    </script>
+        const classes = document.querySelector('div').classList //lista de classes
+        classes.add('destaque')
+        classes.remove('destaque') 
+        classes.toggle('destaque') //alternancia 
+        console.log(classes.contains('destaque')) //se está contida/ se existe na lista de classes
+        console.log(classes.contains('teste'))
+        console.log(classes.length) //numero de classes
+        classes.toggle('destaque') 
+        console.log(classes.length)
+
+        classes.add('destaque1')
+        classes.add('destaque2')
+        console.log(classes.length)
+
+        for(let c of classes){
+            console.log(c)
+        }
+
+        classes.forEach(c => console.log(c))
+
+
+</script>
 </body>
 
 </html>

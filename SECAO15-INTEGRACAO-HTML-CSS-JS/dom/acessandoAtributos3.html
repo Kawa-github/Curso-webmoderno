@@ -16,7 +16,21 @@
         </ul>
     </div>
     <script>
-        // ...
+       
+       const lista = document.querySelector('#compras')
+       console.log(lista.attributes)
+       console.log(lista.attributes[0])
+       console.log(lista.attributes[2])
+       console.log(lista.attributes.destino)
+       console.log(lista.attributes['data-urgencia'])
+         
+       console.log("\n")
+       console.log('Exemplo transformando listas(ul) em Array')
+        const listas = document.querySelector('#compras')
+        const arrayCompras = Array.from(listas.childNodes)
+        arrayCompras.forEach(e => console.log(e.innerHTML))
+        console.log(arrayCompras)
+
     </script>
 </body>
 
