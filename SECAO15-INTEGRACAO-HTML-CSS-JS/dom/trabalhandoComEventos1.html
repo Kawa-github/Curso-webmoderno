@@ -9,9 +9,32 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navegarEm5s(event) -->
+        <a espera-um-pouco href="https://google.com.br" >Google</a>
     </div>
+    <details>
+        <p>conteudo do details</p>
+        <p>conteudo do details</p>
+        <p>conteudo do details</p>
+    </details>
     <script>
-        // ...
+        function navegarEm5s(e){
+            e.preventDefault() // para/preve o comportamento padrao do navegador, ou seja se não tivesse esta função, assim que clicasse no link iria abrir de imediato
+            console.log('Saindo em 5s...')
+            alert('navegandooo')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href //target é o elemento html que disparou o evento / e.target é o link/href
+            }, 5000)
+        } 
+
+        const a = document.querySelector('a')
+        a.onclick = navegarEm5s //chamando função navegar atraves do onclick
+
+        // const a = document.querySelector('[espera-um-pouco]') //atributo personalizado
+        // a.onclick = navegarEm5s
+
+        // const teste = document.querySelector('a')
+        // teste.innerHTML = 'salve'
     </script>
 </body>
