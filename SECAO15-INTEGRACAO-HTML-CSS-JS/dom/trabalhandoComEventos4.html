@@ -31,21 +31,22 @@
         <button wm-submit>Pesquisar</button>
     </form>
     <script>
-        // const submit = document.querySelector('[wm-submit]')
-        // submit.onclick = function (evento){
-        //     evento.preventDefault() //para o comportamento padrao
+        const submit = document.querySelector('[wm-submit]')
+        submit.onclick = function (evento){
+            evento.preventDefault() //para o comportamento padrao
 
-        //     const form = evento.target.parentNode //target seria o <form>
-        //     const formData = new FormData(form)
-        //     formData.append('ajax',true)
-        //     console.log(formData.get('q'))
-        //     console.log(formData.has('hl'))
+            const form = evento.target.parentNode //target seria o <form>
+            const formData = new FormData(form) //formData obj que trata os dados de um formulário
+            formData.append('ajax',true)
+            console.log(formData.get('q'))
+            console.log(formData.has('hl'))
         
-        // for(let dado of formData){
-            //     console.log(dado)
-            // }
-        // }
-            
+        for(let dado of formData){
+                console.log(dado)
+            }
+        }
+        
+
         const form = document.forms[0]
         form.onsubmit = function (evento){
             evento.preventDefault() //para o comportamento padrao
