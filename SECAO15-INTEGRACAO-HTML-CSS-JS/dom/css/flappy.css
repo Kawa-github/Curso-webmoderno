@@ -62,5 +62,32 @@
     font-size: 50px;
     font-family: pixel;
     z-index: 100;
+}
 
+.playAgain{
+}
+
+.playAgain p{
+    font-family: pixel;
+    font-size: 50px;
+}
+
+#divJogar{
+    display: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+.btn-repetir{
+    width: 80px;
+    background: linear-gradient(90deg, #639930, #A5EB82);
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    z-index: 100;
+    margin: 20px;
+    padding: 6px;
+    display: none;
 }
