@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div> <!--[0]-->
+    <div>2</div> <!--[1]-->
+
+    <span>Salve</span>
+
+    <script>
+        $('div').hide(5000).show(5000).fadeOut(1000)
+        console.log($('div').get(0)) //retorna a primeira div na posição [0] da lista de elementos
+        console.log($.isEmptyObject({nome: null}))
+        console.log($.inArray(3, [1,2,3]))
+
+        $.fn.fundoverde = function(){
+            this.css('background-color','green')
+            return this
+        }
+
+        $.fn.fundovermelho = function (){
+            this.css('background-color','red')
+            return this
+        }
+
+        $('body').fundoverde().fadeOut(5000)
+        $('span').fundovermelho()
+    </script>
+</body>
